@@ -1,0 +1,21 @@
+package constructorChaining;
+
+class A
+{
+	A()
+	{
+		System.out.println("no args");
+	}
+	A(int x)
+	{
+		System.out.println("int args");
+	}
+	A(String y)
+	{
+		System.out.println("String args");
+	}
+}
+
+public class Demo {
+
+}

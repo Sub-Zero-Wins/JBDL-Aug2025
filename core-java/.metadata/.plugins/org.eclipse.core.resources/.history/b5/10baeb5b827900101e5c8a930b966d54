@@ -1,0 +1,11 @@
+package contructors;
+
+public class Employee 
+{
+   int id=1;
+   String name="Rushda";
+   String addr="AndraPradesh";
+   
+   
+   
+}

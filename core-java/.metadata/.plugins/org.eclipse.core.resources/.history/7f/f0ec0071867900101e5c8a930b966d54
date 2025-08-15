@@ -1,0 +1,46 @@
+package blocks;
+
+public class Demo 
+{
+	
+	int x;
+	static double y;
+	
+	Demo()
+	{
+		System.out.println("constructor");
+		this.x=10;
+	}
+	
+	static {
+		System.out.println("static block");
+		y=20;
+	}
+	
+	{
+		System.out.println("non static block");
+		x=30;
+	}
+	
+	public void m1() {
+		System.out.println("non static method");
+	}
+	
+	public static void m2() {
+		System.out.println("static method");
+	}
+     
+	public static void main(String[] args) 
+	{
+		System.out.println("main start");
+		m2();
+		System.out.println(y);
+		
+		Demo d=new Demo();
+		System.out.println(d.x);
+		d.m1();
+		
+		System.out.println("main end");
+		
+	}
+}

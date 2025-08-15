@@ -1,0 +1,9 @@
+package inheritance;
+
+public class EmptyClass // extends Object
+{
+	//public EmptyClass(){
+	  // super();
+	//}
+
+}

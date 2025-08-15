@@ -1,0 +1,33 @@
+package constructorChaining;
+
+//class Object
+//{
+//	public Object()
+//	{
+//		
+//	}
+//}
+
+class X // extends Object
+{
+	X()
+	{
+		//super();
+		System.out.println("X constr");
+	}
+}
+class Y extends X
+{
+	Y()
+	{
+		//super();
+		System.out.println("Y constr");
+	}
+}
+public class SuperDemo 
+{
+	public static void main(String[] args) {
+		new Y();
+	}
+
+}

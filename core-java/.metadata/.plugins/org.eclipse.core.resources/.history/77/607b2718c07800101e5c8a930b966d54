@@ -1,0 +1,17 @@
+package oops;
+
+public class CustMain 
+{
+	public static void main(String[] args) 
+	{
+		// accesing static variables and methods
+		
+		Customer.custIdCounter=1;
+		System.out.println(Customer.custIdCounter);
+		
+		System.out.println(Customer.totalCustomers());
+		System.out.println(Customer.getNextCustId());
+		
+	}
+
+}

@@ -1,0 +1,346 @@
+Java
+----
+-> Java is a robust programming language
+-> It has high security
+-> Its a portable programming(can be compiled on one system and executed on any other system)
+-> Its rich in features
+-> IT industry is predominantly using java
+   Banking, Financial Services and Insurance (BFSI)-> are using java
+
+Java architecture
+-------------------
+Jvm + Jre + Lib + dev tools = jdk
+
+
+JVM architecture
+-----------------
+
+
+--------------------------------------------------------------------------------------------------
+
+Java Data types
+----------------
+
+Primitive
+----------(not objects)
+
+byte     1   -128 to 127
+short    2   -32,768 to 32,767
+int      4   -2,147,483,648 to 2,147,483,647.
+long     8   -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+
+float(IEEE)    4    -  3.14f, -1.23e-10f    ~6-7 significant decimal digits
+double(IEEE)   8    -  3.1415d, 1.23e100d   ~15-16 significant decimal digits
+ 
+char           2    -  2^16 65536
+boolean        1    -  true false
+
+
+
+Non Primitive
+--------------(Objects)
+
+String
++
+Wrapper classes
+
+Byte     1   -128 to 127
+Short    2   -32,768 to 32,767
+Integer      4   -2,147,483,648 to 2,147,483,647.
+Long     8   -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+
+Float(IEEE)    4    -  3.14f, -1.23e-10f    ~6-7 significant decimal digits
+Double(IEEE)   8    -  3.1415d, 1.23e100d   ~15-16 significant decimal digits
+ 
+Character           2    -  2^16 65536
+Boolean        1    -  true false
++
+User defined objects
+
+
+---------------------------------------------------------------------
+
+
+loops and conditional statements
+---------------------------------
+
+
+loops
+----
+
+for 
+
+for(initialization;condition;updation)
+
+
+while
+  
+ 
+do while
+
+
+conditional
+----------
+
+if elseif else
+
+switch
+
+----------------------
+HW
+----
+Operators in java
+------------------
+
+Methods
+--------
+A named body which is set of instructions that performs a task and returns a value.
+
+returntype methodName() // mandatory
+{
+}
+
+
+method overloading/ Static polymorphism / virtual polymorphism /compile-time polymorphism
+------------------------------------------------------------------------------------------
+
+writing multiple methods with same name and different signatures
+
+signature= 1) type of parameter/argument
+           2) order of parameter/argument
+           3) number of parameter/argument
+
+
+HW 
+---
+
+Build a calculator(by taking user input from console)
+--------------------------------------------------------
+-> use do while loop create a menu
+-> take input using scanner and use switch case to store various logic
+-> give console based result and continue till user exits the menu
+
+
+OOPS
+----
+
+OBJECT ORIENTED PROGRAMMING
+----------------------------
+
+Its a programming paradigm(style) which treats every thing in the business as an object in the program.
+
+
+Customer
+Product 
+Category
+Cart
+Payment
+Delivery
+
+
+Objects/Entity
+---------------
+Are entities which have their own state and behaviour
+Objects are created inside the heap memory
+
+Class
+------
+is a java definition block which defines the states and behaviour of an object
+class is aka blue print of an object
+class doesn't exist in reality(in memory) object exists in reality.
+
+
+What all things can be written inside a class ?
+ 
+1. declare and initialize static and non static variables
+2. declare and define static and non static methods
+3. Constructors
+4. Static/non Static Blocks
+5. nested class and interface
+
+
+1. Accessing static variables and methods
+
+   syntax ClassName.memberName
+
+2. Accessing non static members
+    
+  syntax   ClassName refVariable = new ClassName();
+
+
+note static and non static variables are initialized by default values by the jvm
+
+
+
+types of variables
+
+1. non static / instance/object variable (default value by jvm can be used without initialization)
+
+2. static  / class variable (default value by jvm can be used without initialization)
+
+3. local   variable (No default value by jvm cannot be used without initialization)
+
+
+NOTE:
+ //non static variables cannot be directly accessed inside static bodies(methods/blocks)  can only be accessed by object creation
+
+Since static members get memory first, non static members are not allowed directly inside static members
+without object creation
+
+2 ways to initialize object
+-----------------------------
+
+initialize means give values to object variables.
+
+1. Constructors (used widely)
+2. Non static Blocks (not used much)
+
+
+2. Constructors 
+ These are special types of method which have same name as that of class name
+ they do have return type
+ they don't accept modifiers like static , final, synchronized strictfp etc
+
+ Constructors are used to initialize objects
+
+ Every Class has a default constructor introduced by the compiler
+ 
+ which will always be empty (no args constructor , 0 parametrized constr.)
+
+ Constructors are called when we create objects (when we instantiate a class)
+
+ syntax = accessmodifer ClassName(){}
+
+Constructors can be overloaded
+
+i.e writing multiple construstors with different signatures
+
+signature = 1. Type 
+            2. order
+            3. number of params
+
+
+This keyword
+-------------
+
+This keyword is used to refer to the current object
+this is used when ever local variable names are same as instance variable names(shadowing problem)
+this is used to overcome shadowing problem i.e in a {} local variables are given preference hence
+this is used to point to instance variables of a class.
+
+
+Blocks
+------
+
+1. static block
+    
+   static blocks are executed even before main method    
+
+2. non static block
+
+   non static block will executed before a constructor executes
+ 
+ 
+ Flow of execution Of Java Program
+---------------------------------------
+
+1 . write code and compile to bytecode and give byte code to jvm for execution
+2 . Class Loading activity (place all static members in metaspace) 
+3 . execute static block if exists
+4 . execute main if exists
+5 . you can access all static members now becase they have been allocated memory
+6 . create object if required (new key word creates object)
+7 . executes non static block if exists
+8 . executes constructor and initializes objects
+9 . access all non static memebers required as they have been allocated memory
+10. main method end
+
+
+IT Standards
+------------
+
+
+1. Name conventions
+
+   ClassName/Interface/Enum is in Pascal Case (every word 1st letter is upper case)
+
+   methodName is in camelCase(first word 1st letter is lower case consecutive word 1st letter upper case)
+   
+   variableName is also in camelCase
+ 
+   CONSTANT_NAMES is in ALL_CAPS separated by underscores
+
+2. Single Class inside a source file(except nested classes)
+  
+ 
+
+---------------------------------------------------------------------------------------------------------
+
+Pillars of Object Oriented Programming
+---------------------------------------
+
+1. inheritance
+   ------------
+
+   its the phenomenon in which one class acquires the properties of another class
+   class which gives properties is called parent/super/base class
+   class which takes properties is called child/sub/derived class
+
+   
+   Levels/Types of inheritance  
+   ---------------------------
+  1. single level
+  2. multilevel
+  3. hierarchical
+  4. hybrid
+
+   disallowed inheritance
+   -------------------------
+
+  5. multiple
+  6. cyclic inheritance
+ 
+important conclusions
+----------------------
+
+1.  every class in java is a subclass of Object class directly or indirectly
+
+2.  a class is never empty after compilation compiler will add extends Object (if class already in not extending)
+    and add default constructor (if you have not written a default constructor) and inherits 9 methods from object class
+
+3. private members , constructors , blocks , nested classes do not get inherited
+
+4. 
+
+
+
+
+
+
+
+
+
+2. encapsulation
+
+3. polymorphism
+
+4. abstraction
+
+
+Aggregation Composition
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

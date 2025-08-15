@@ -1,0 +1,47 @@
+package loops;
+
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+public class Demo1 
+{
+	public static void main(String[] args) 
+	{
+		
+//		for(int i = 0; i <=4 ;i++) {
+//			
+//			for(int j = 0; j <=4 ;j++) {
+//				System.out.print("*");
+//				
+//			}
+//			System.out.println();
+//			
+//		}
+//		
+		int x=0;// initialization
+		while(x<4)//condition
+		{
+			System.out.println("*");
+			x++; //updation
+		}
+		
+		
+		
+		do {
+			x++;
+			System.out.println("*");	
+		}while(x<2);
+	
+	   
+	    
+	    
+	    
+	    
+		
+		
+		
+		
+	}
+
+}
