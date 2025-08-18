@@ -1,0 +1,21 @@
+package polymorphism;
+
+class Parent
+{
+	public void m1()
+	{
+		System.out.println("Parents method");
+	}
+}
+
+class Child extends
+{
+	public void m1()
+	{
+		System.out.println("Childs method");
+	}
+}
+
+public class Demo {
+
+}

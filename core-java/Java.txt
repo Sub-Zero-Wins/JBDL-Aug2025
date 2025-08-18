@@ -308,23 +308,131 @@ important conclusions
 2.  a class is never empty after compilation compiler will add extends Object (if class already in not extending)
     and add default constructor (if you have not written a default constructor) and inherits 9 methods from object class
 
-3. private members , constructors , blocks , nested classes do not get inherited
-
-4. 
+3.  private members , constructors , blocks , nested classes do not get inherited
 
 
+this
+
+this()
+-----
+used to call constructors within a class
+one cosntr will execute only once for one object
+i.e recursive constr  invocation is not allowed
+this() should always be the 1st line inside a constr body.
+
+
+super()
+-------
+super() calls parent class constructor
+should always be the 1st line inside a constr body.
+compiler by default adds super() emty args of parent class has empty args constructor (implicit constructor chaining)
+if parent class constructor has args we have to perform constructor chaining explicitly
+
+super
+-----
+
+used to resolve name conflict of immediate super classes member name is same
+
+
+Access modifiers
+---------------------
+
+private   - private members (variable/methods) can only be accessed within the class they are declared in
+default   - aka package level access modifier, you can only access this inside the package its declared in
+protected - same as default + can access outside the package if inheritance exists
+public    - can be accessed across the project by importing
+
+
+note for a class you can only give public/default access modifiers
+and source file name should be same as public class name;
+
+Object Class Methods.
+----------------------
+
+1. hashcode(): -
+    integer number calculated for each object address
+    can be overridden in the subclass 
+   
+
+
+2. equals():   -
+    equals method of object class compare 2 objects based on hashcode
+    can be overridden in the subclass to compare based on content of the objects.
 
 
 
+3. toString(): - objectClassMethods.Demo@5ca881b5
+    Object class to string method returns fullyQualifiedname@hexadecimalAddressOfTheObject
+    can be overridden in the subclass if we want to display contents of the object
+    
 
 
 
 
 2. encapsulation
+----------------
+   Encapsulation is oop fundamental that involves bundling data (private vars) and methods (public getter/setter) as a single unit.
+
+
+
 
 3. polymorphism
+----------------
+   poly=many morph=form
+    
+   Its the ability of an object to show different forms in different stages
+
+   2 Types
+   
+1.CompileTime/virtual/static polymorphism  : example- method/constr overloading
+
+  where binding of method declaration with method definition happens during the compile time
+
+2.Runtime/Real/dynamic polymorphism        : example- method overriding
+
+  where binding of method declaration with method definition happens during the runtime
+
+
+Method Overriding.
+--------------------
+If a child class is unhappy with the parent class implementation of the method, it has all rights to change the implementation
+by overriding it
+
+rules
+
+1. name and parameters should be same 
+
+2. primitive return types cannot be changed
+   non primitive return types can be co variant but not contra variant
+
+3. access modifiers visibility can be kept same or increased but cannot be decreased
+
+parent:    	public        protected   default      private
+
+child:      	public        protected   default      cannot be overridden(because cannot be inherited)
+                              public      protected
+                                          public
+        
+not allowed: 	protected     default     private
+                default       private
+                private
+
+   
+3.  private/static/final methods cannot be overridden
+    
+    private- cannot be overridden(because cannot be inherited)
+    static - cannot be overridden(because its class level method not object level)
+    final  - cannot be overridden(because cannot be modified)
+
+                final->class    -> cannot be inherited
+		final->variable -> cannot be reassigned
+		final->method   -> cannot be overridden
+                  
+
+
 
 4. abstraction
+---------------
 
 
 Aggregation Composition

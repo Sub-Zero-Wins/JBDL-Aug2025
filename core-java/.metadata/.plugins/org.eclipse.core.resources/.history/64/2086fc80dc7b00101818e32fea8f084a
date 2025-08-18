@@ -1,0 +1,27 @@
+package polymorphism;
+
+class Parent
+{
+	public Parent m1()
+	{
+		System.out.println("Parents method");
+		return null;
+	}
+}
+
+class Child extends Parent
+{
+	@Override
+	public Child m1()
+	{
+		System.out.println("Childs method");
+		return null;
+	}
+}
+
+public class Demo {
+	public static void main(String[] args) {
+         Child child = new Child();
+         child.m1();
+	}
+}
