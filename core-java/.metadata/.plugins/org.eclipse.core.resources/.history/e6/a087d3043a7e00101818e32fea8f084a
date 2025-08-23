@@ -1,0 +1,13 @@
+package interfaces;
+
+class X
+{
+	public void m1()
+	{
+		System.out.println("hello world");
+	}
+}
+
+public class Dem2 {
+
+}

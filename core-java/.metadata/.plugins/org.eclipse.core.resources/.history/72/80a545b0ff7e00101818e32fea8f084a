@@ -1,0 +1,10 @@
+package multithreading;
+
+public class InvalidVoterAgeException extends RuntimeException 
+{
+	public InsufficientFundsException (String message)
+	{
+		super(message);
+	}
+ 
+}

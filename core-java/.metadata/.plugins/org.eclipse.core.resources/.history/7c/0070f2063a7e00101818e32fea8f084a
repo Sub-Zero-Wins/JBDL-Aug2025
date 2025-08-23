@@ -1,0 +1,16 @@
+package interfaces;
+
+class X
+{
+	public void m1()
+	{
+		System.out.println("hello world");
+	}
+}
+interface Itrx
+{
+	 void m2();
+}
+public class Dem2 {
+
+}

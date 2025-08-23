@@ -1,0 +1,18 @@
+package abstraction;
+
+public class FighterPlane extends Plane {
+
+	@Override
+	public void takeOff() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void land() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

@@ -1,0 +1,17 @@
+package hasADemo;
+
+public class HasADemo 
+{
+	public static void main(String[] args)
+	{
+		Address addr = new Address(56788,"Hyderabad","Charminar rd");
+		
+		Employee emp = new Employee(1,"Rushda",addr);
+		
+		System.out.println(emp);
+		
+		System.out.println(emp.getAddr().getCity());
+		
+	}
+
+}

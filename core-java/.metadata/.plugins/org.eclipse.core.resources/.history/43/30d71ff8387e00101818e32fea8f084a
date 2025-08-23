@@ -1,0 +1,29 @@
+package interfaces;
+
+interface Itr1
+{
+	public void m1();
+}
+
+interface Itr2 
+{
+	public void m2();	
+}
+
+interface Itr3 extends Itr1,Itr2
+{
+	
+}
+
+class A implements Itr1,Itr2,Itr3
+
+
+public class Demo1
+{
+	public static void main(String[] args) 
+	{
+		
+		
+	}
+
+}

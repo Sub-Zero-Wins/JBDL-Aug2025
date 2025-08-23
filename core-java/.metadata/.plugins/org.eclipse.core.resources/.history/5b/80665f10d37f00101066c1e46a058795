@@ -1,0 +1,9 @@
+package strings;
+
+public class StringsDemo 
+{
+	public static void main(String[] args) {
+		String name1="syed";
+	}
+
+}

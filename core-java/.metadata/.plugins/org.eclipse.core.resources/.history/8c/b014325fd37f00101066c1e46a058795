@@ -1,0 +1,13 @@
+package strings;
+
+public class StringsDemo 
+{
+	public static void main(String[] args) {
+		String name1 = "syed";
+		String name2 = new String("saqib");
+		
+		StringBuilder sbd = new StringBuilder("Rushda");
+		StringBuffer sbf = new StringBuffer("Rushda");
+	}
+
+}

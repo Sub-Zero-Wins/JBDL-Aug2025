@@ -1,0 +1,11 @@
+package hasADemo;
+
+public class HasADemo 
+{
+	public static void main(String[] args)
+	{
+		Address addr = new Address(56788,"Hyderabad","Charminar rd");
+		
+	}
+
+}

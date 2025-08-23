@@ -1,0 +1,18 @@
+package abstraction;
+
+public class FighterPlane extends Plane {
+
+	@Override
+	public void takeOff() {
+		
+		
+	}
+
+	@Override
+	public void land() {
+		
+		
+	}
+
+	
+}

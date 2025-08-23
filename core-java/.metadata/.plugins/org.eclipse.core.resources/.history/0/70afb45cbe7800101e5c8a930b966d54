@@ -1,9 +1,0 @@
-package oops;
-
-public class Customer 
-{
-    int customerId;
-    String customerName;
-    static String bankAccount;
-    
-}

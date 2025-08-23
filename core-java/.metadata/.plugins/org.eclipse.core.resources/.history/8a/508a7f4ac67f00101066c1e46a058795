@@ -1,0 +1,52 @@
+package multithreading;
+
+
+class BookTicket implements Runnable
+{
+	int seatNumber=3;
+	
+	public synchronized void bookSeat() throws InterruptedException
+	{
+		System.out.println(Thread.currentThread().getName()+" has selected seat : "+seatNumber);
+		Thread.sleep(2000);
+		System.out.println(Thread.currentThread().getName()+" is making payment for : "+seatNumber);
+		Thread.sleep(2000);
+		System.out.println(Thread.currentThread().getName()+" payment successful booked :"+seatNumber);		
+		seatNumber=seatNumber-1;
+	}
+	
+	public void run()
+	{
+		try {
+			bookSeat();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+
+public class TicketBookingDemo 
+{
+	
+	public static void main(String[] args)
+	{
+		BookTicket resourse=new BookTicket();
+		Thread user1= new Thread(resource);
+		Thread user2= new Thread(resource);
+		Thread user3= new Thread(resource);
+		
+		user1.setName("Saqib");
+		
+		user2.setName("Rushda");
+	
+		user3.setName("Syed");
+		
+		user1.start();
+		user2.start();
+		user3.start();
+	}
+	
+	
+
+}

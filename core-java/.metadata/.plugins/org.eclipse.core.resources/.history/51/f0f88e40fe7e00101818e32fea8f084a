@@ -1,0 +1,31 @@
+package multithreading;
+
+import java.io.IOException;
+
+public class ExceptionHandling 
+{
+	public static void main(String[] args) {
+		System.out.println("main start");
+	
+		try {
+			System.out.println(10/0);
+		} catch (ArithmeticException e) {//ArithmeticException e = new ArithmeticException() // spesialized catch
+			System.out.println(e.getMessage());
+		}
+		catch (NullPointerException e) {
+			System.out.println(e.getMessage());//spesialized catch
+		}
+		 catch (Exception e) {//Exception e = new ArithmeticException() // generic/generalized catch block
+				System.out.println(e.getMessage());
+			}
+		finally
+		{
+			System.out.println("clean up finally");
+		}
+		System.out.println("main end");
+		
+		
+		
+	}
+
+}

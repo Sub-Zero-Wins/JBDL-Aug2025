@@ -434,8 +434,146 @@ not allowed: 	protected     default     private
 4. abstraction
 ---------------
 
+Abstraction is the process if presenting only the essential features of an objector a system while hiding the complex underlying implementation details. It allows developers to work with simplified representations making code easier to design implement and  maintain.
 
-Aggregation Composition
+Types of methods
+
+1. concrete method impl.
+------------------------
+
+public void m1() // declaration
+{
+  SOP("hello world") // defn /impl
+}
+
+2. empty method impl.
+------------------------
+
+public void m1() // declaration
+{
+ //empty
+}
+
+3. asbtract method .
+------------------------
+
+abstract public void m1(); // declaration
+
+
+Types of classes
+---------------
+
+
+1. concrete class
+--------------------
+  class Demo{
+    // all concrete methods
+ }
+
+2.abstract  class
+--------------------
+ abstract class Demo{
+    // 99 concrete methods
+    // 1 abstract method
+ }
+
+Note: abstract classes cannot be instantiated
+
+Upcasting :
+parent type of ref pointing to child object.
+it can access only inherited and overridden methods
+it promotes loose coupling and code reuseability
+
+Downcasting:
+ we can only downcast an upcasted object
+ downcasting is used to access the special methods of the children classes
+
+---------------------------------------------------------------------------------
+
+interfaces
+----------
+
+Interfaces are purely abstract bodies
+interfaces cannot be instantiated
+all methods are by default public and abstract
+all variables are public static and final
+
+important points to remember
+----------------------------
+
+1. interfaces can extends interfaces and even multiple inheritance is allowed(no constructor chaining problem because no constr in interfaces)
+
+2. extends kw -can only exist between 2 interfaces or 2 class . Class and interface cannot extends each other
+   implements kw -only a class can implement an interface.
+
+3. one class can implement multiple interfaces
+
+4. one interface can be implemented by multiple classes
+
+5. on class can extends another class and implement other interfaces at the same time
+
+  syntax :
+  
+  class A extends B implements Itr1,Itr2 // correct syntax
+  class A  implements Itr1,Itr2 extends B// incorrect syntax
+
+6. a class extending another class and implementing another interface can suffice the implementation if the method also exists in     another class with same name as in the interface
+
+7. an empty interface is called as a marker interface
+
+8. an interface with only one abstract method is called as functional interface
+
+
+
+Aggregation Composition (HAS-A relationship)
+---------------------------------------------
+
+
+Exception Handling
+-------------------
+ 
+Exception : an unwanted error that we encounter during runtime which disrupts the normal flow of execution of a program
+
+
+try catch finally throw and throws.
+
+
+
+HW exp handling
+------------------
+
+Valid invalid syntaxes of try catch finally
+Create custom exception insufficient funds and throw it from a minor banking app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
