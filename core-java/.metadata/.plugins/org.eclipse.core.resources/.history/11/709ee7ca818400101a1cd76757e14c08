@@ -1,0 +1,15 @@
+package methodReferencing;
+
+interface Itr
+{
+	Demo m1();
+}
+
+class Demo
+{
+	
+}
+
+public class Demo2 {
+
+}

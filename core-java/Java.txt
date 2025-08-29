@@ -547,6 +547,389 @@ Create custom exception insufficient funds and throw it from a minor banking app
 
 
 
+-----------------------------------------------------------------
+
+Multithreading
+---------------
+
+HW
+---
+
+
+
+Arrays
+-------
+
+HW :
+2 sum problem
+
+
+
+Strings
+-------
+
+Strings in java are objects
+its sequence characters
+
+2 types of string
+-----------------
+
+
+->immutable string
+--------------------
+non changeable
+
+String
+------
+
+
+->mutable string
+--------------------
+changeable
+
+StringBuilder/StringBuffer
+---------------------------
+
+
+Boxing/wrapping and Unboxing/unwrapping
+-------------------------------------
+
+boxing is converting primitive to non primitive (auto boxing / explicit boxing)
+
+unboxing is converting non primitive to  primitive (auto unboxing / explicit unboxing)
+
+
+
+Collections
+------------
+
+Drawbacks of arrays
+--------------------
+
+
+1. fixed in size.
+
+2. homogenous data only
+
+3. demand continuous memory
+
+------------------------------
+
+COLLECTION
+------------
+
+a group of individual objects represented as a single entity
+all elements are wrapper classes no primitives.
+
+1. Collection (I)
+------------------
+Collection is the root interface of all collection classes it has around 19 methods that are inherited by the collection classes
+
+
+2. List
+--------
+When ever we want to represent a group of individual objects as a single entity where duplicates are allowed and insertion order is preserved
+
+1. ArrayList
+    - underlying data is dynamic array
+    - array list demands continuous memory
+    - fast for read operations as it implements RandomAccess interface
+    - slower for insertion and deletion because of shift operation in continuous memory
+   
+
+
+
+2. LinkedList
+   - underlying data structure is doubly linked list
+   - makes use of discrete memory
+   - fast of insert delete operations
+   - slower in read
+
+3. Vector
+   - legacy class same as arraylist with some old methods
+   - all methods are synchronized
+
+4. Stack
+    - legacy class with push and pop operations following LIFO order
+
+
+
+3.  Set
+------------
+
+When ever we want to represent a group of individual objects as a single entity where duplicates are not allowed and insertion order is not preserved
+
+1. HashSet
+    underlying ds is hashtable
+    best for searching operations
+    duplicates not allowed
+    insertion order is not preserved
+
+2. LinkedHashSet
+    underlying ds is hashtable + linked list
+    same as hashset
+
+3. TreeSet
+    underlying ds is red black tree / balanced tree
+    elements must be homogenous and comparable
+    NOTE: elements in java are said to be comparable if they implement Comparable Interface.
+    
+
+
+
+
+Maps
+----
+When ever we want to represent a group of individual objects as key value pair
+
+keys are unique
+objects can be duplicate
+
+key value pair is called as an entry
+
+
+
+HW-> Iteration on map / queue
+
+
+
+Generics advantages
+-------------------
+
+1. promotes type safety
+2. improvises code reusability
+3. prevents type casting
+----------------------------------------------------------------------------------------------
+
+java8 features
+--------------
+
+default static methods  + java 9 (private methods)
+---------------------------------------------------
+
+default methods-
+
+-declared using default kw in an interface 
+-default methods are introduced in an interface to add new features without breaking the code
+-if any class wants to override it , it can override that method
+-a class with SAM is a functional interface even with multiple default/static/private methods.
+
+static methods-
+ -can create general utility methods
+ -can only be accessed using InterfaceName.staticMethodName(); // only allowed syntax
+ -can even run main method in an interface
+ 
+private method (java 9)
+ - private static methods can be used for code reusability inside interfaces.
+
+
+
+
+optional class
+---------------
+
+Functional Interfaces
+---------------------
+SAM
+
+Lambda expressions
+-------------------
+
+lambda calculus 1930s to reduce the length of complex math expressions
+
+
+
+LISP first programming lang.
+
+
+
+Lambda expressions are anonymous functions
+
+- no name
+- no return type
+- no modifier
+
+
+1. 
+
+public void m1()
+{
+ System.out.print("hello");
+}
+
+lambda eqv.
+-----------
+
+()->{
+ System.out.print("hello");
+ 
+ };
+
+()-> System.out.print("hello");  // one liner can omit {}
+
+2. 
+
+public void add(int x, int y)
+{
+  System.out.print(x+y);
+}
+
+lambda eqv.
+-----------
+
+(int x, int y)->
+{
+  System.out.print(x+y);
+};
+
+(int x, int y)-> System.out.print(x+y);
+
+(x,y)-> System.out.print(x+y); // param types can be omitted 
+
+
+3.
+
+public int add(int x, int y)
+{
+  return x+y;
+}
+
+lambda eqv.
+-----------
+
+(int x,int y)->{ return x+y; } ;
+
+(x,y)->{ return x+y; } ;
+
+(x,y)->  x+y ; // return and {} either exist together or are removed together in single line statements.
+
+
+
+4. 
+public int square(int n)
+{
+  return n*n;
+}
+
+
+lambda eqv
+----------
+
+ (n)->{
+  return n*n;
+};
+
+ n->n*n; // if only one parameter the () can be omitted.
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+1. (x,y)-> return x+y; // invalid 
+
+2. (x,y)-> {System.out.print(x+y);} // invalid
+
+3. (x,y)-> {System.out.print(x+y)}; //invalid
+
+4. (x,y)-> {return x+y}; // invalid
+
+5. (x,y)-> x+y; // valid
+
+6. (x,y)-> {x+y;}; // invalid 
+
+7. (y)->{ return x+y;}; // valid
+
+8. x,y-> x+y;// invalid
+
+9.  -> x+y ;// invalid
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Lambda expressions can only be used in functional interfaces.
+
+
+benefits
+--------
+
+1. concise syntax
+2. brings in benefits of functional programming making code more readable
+   i.e methods can be passed as arguments to other method
+
+3. java provides inbuild generic functional interfaces for simple day to day tasks
+
+java.util.function package
+
+
+Predicate - used for Boolean condition checks
+
+Function - used when we want to give some input and expect an output
+
+Consumer - to pass some input and not return any thing
+
+Supplier
+
+
+
+stream API
+-----------
+
+used to process data sets and perform operations using inbuild functions
+
+2 types of operations in stream api
+
+intermediate operations - lazy executed , means until you do not perform terminal operations it wont execute
+example filter,map,sort etc
+
+terminal operations - 
+example collect,forEach
+
+
+
+
+
+
+
+
+method and constructor referencing
+joda time API
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+jdbc
+----
+
+springboot
+-----------
+
+microservices
+--------------
+
+
+
+
 
 
 

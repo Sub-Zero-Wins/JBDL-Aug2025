@@ -1,0 +1,26 @@
+package methodReferencing;
+
+@FunctionalInterface
+interface Itr
+{
+	Demo m1();
+}
+
+class Demo
+{
+	Demo()
+	{
+		System.out.println("Demo constr");
+	}
+}
+
+public class Demo2
+{
+	public static void main(String[] args) 
+	{
+		Itr i = Demo::new;
+		i.m1();
+		
+	}
+
+}

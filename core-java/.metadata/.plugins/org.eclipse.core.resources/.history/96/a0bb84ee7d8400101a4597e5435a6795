@@ -1,0 +1,44 @@
+package streamApi;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+public class Demo1 
+{
+	public static void main(String[] args)
+	{
+		List<Integer> marks = Arrays.asList(29,25,37,35,78,79,76,90);
+		List<Integer> passedMarks= new ArrayList();
+		
+		System.out.println("conventional style");
+		for(Integer mark: marks)
+		{	
+			if(mark>=35)
+			{
+				passedMarks.add(mark);
+			}
+		}
+		
+		for(Integer mark: passedMarks)
+		{	
+			System.out.println(mark);
+		}
+		
+		System.out.println("stream api style");
+		marks.stream().filter(i->i>=35).collect(Collectors.toList()).forEach(System.out::println);
+		
+		Predicate<Integer> p = i -> i >= 35;
+		Function<Integer,Integer>  f = i -> i+6;
+		
+		marks.stream().map(f).filter(p).sorted((i1,i2)->-i1.compareTo(i2)).collect(Collectors.toList()).forEach(i->System.out.println(i));;
+		
+		marks.stream().map(f).filter(p).sorted().min();
+		
+		
+	}
+
+}

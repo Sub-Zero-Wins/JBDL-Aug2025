@@ -1,0 +1,13 @@
+package lambdaExpressions;
+
+@FunctionalInterface
+interface Calc
+{
+	 void square(int x);
+}
+
+
+
+public class Demo1 {
+
+}

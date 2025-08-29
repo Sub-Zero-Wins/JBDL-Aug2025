@@ -1,0 +1,19 @@
+package lambdaExpressions;
+
+import java.util.function.Supplier;
+
+public class SupplierDemo
+{
+	public static void main(String[] args) 
+	{
+		Supplier<String> otps = ()->{
+			
+			String otp= "";
+			
+			return otp;
+			
+		};
+		
+	}
+
+}

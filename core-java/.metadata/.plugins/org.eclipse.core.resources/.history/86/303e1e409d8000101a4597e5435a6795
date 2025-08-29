@@ -1,0 +1,45 @@
+package maps;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+
+public class Demo1 
+{
+	public static void main(String[] args)
+	{
+		HashMap hm = new HashMap();
+		hm.put(31, "syed");
+		hm.put(21, "syed");
+		hm.put(13, "syed");
+		hm.put(42, "saqib");
+//		hm.put(null, null);
+		System.out.println(hm);
+		
+		LinkedHashMap lhm = new LinkedHashMap();
+		lhm.put(31, "syed");
+		lhm.put(21, "syed");
+		lhm.put(13, "syed");
+		lhm.put(42, "saqib");
+//		hm.put(null, null);
+		System.out.println(lhm);
+		
+		TreeMap<Integer,String> tm = new TreeMap<Integer,String>();
+		tm.put(31, "a");
+		tm.put(21, "c");
+		tm.put(13, "d");
+		tm.put(42, "b");
+//		hm.put(null, null);
+		System.out.println(tm);
+		
+		TreeMap<Integer,String> tm2 = new TreeMap<Integer,String>();
+		tm2.put(31, "a");
+		tm2.put(21, "c");
+		tm2.put(13, "d");
+		tm2.put(42, "b");
+//		hm.put(null, null);
+		System.out.println(tm2);
+		
+	}
+
+}

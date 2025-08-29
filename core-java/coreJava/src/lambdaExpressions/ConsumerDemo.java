@@ -1,0 +1,15 @@
+package lambdaExpressions;
+
+import java.util.Date;
+import java.util.function.Consumer;
+
+public class ConsumerDemo
+{
+	public static void main(String[] args) {
+		
+		Consumer<Date> date= (dateNow)-> System.out.print(dateNow);
+		
+		date.accept(new Date());
+	}
+
+}

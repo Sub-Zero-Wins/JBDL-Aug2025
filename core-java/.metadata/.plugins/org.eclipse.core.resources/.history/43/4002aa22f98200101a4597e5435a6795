@@ -1,0 +1,12 @@
+package lambdaExpressions;
+
+interface Calc
+{
+	public void square(int x);
+}
+
+
+
+public class Demo1 {
+
+}

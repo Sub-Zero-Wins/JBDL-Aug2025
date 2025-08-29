@@ -1,0 +1,38 @@
+package collection;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ArrayListDemo 
+{
+	public static void main(String[] args) 
+	{
+		ArrayList al = new ArrayList(100);
+		 al.add(1);
+		 al.add(2.3f);
+		 al.add(3.898);
+		 al.add("saqib");
+		 al.add(5);
+		 al.add(6);
+		 al.add(7);
+		 al.add(8);
+		 al.add(9);
+		 al.add(10);
+		 al.add(10);
+		 System.out.println(al);
+		 
+		 for(Object o:al)
+		 {
+			 System.out.println(o);
+		 }
+		 
+		 Iterator itr = al.iterator();
+		 
+		 while(itr.hasNext())
+		 {
+			 System.out.println(itr.next());
+		 }
+		
+	}
+
+}

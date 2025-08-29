@@ -1,8 +1,0 @@
-package abstraction;
-
-public interface Plane 
-{
-	public void takeOff();
-	public void land();
-
-}

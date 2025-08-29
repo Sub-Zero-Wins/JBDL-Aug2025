@@ -1,0 +1,28 @@
+package defaultMethods;
+
+
+class X{
+	static void m1()
+	{
+		System.out.println("class static method");
+	}
+}
+
+interface Y
+{
+	static void m2()
+	{
+		System.out.println("interface static method");	
+	}	
+}
+
+public class Demo4 extends X implements Y{
+	
+	public static void main(String[] args) 
+	{
+		X.m1();
+		new X().m1();
+		
+	}
+
+}

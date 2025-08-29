@@ -1,0 +1,36 @@
+package lambdaExpressions;
+
+import java.util.function.Predicate;
+
+public class PredicateDemo
+{
+	public static void main(String[] args) {
+		 
+		Predicate<Integer>  isEven = n -> n%2==0;
+		
+		Predicate<String>  passwordCheck = s -> {
+			return s.length()>=8 && s.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?!.*\\s).{8,32}$") ;
+		
+		}
+		
+		String[] passwords= {"Syed@123","Syed@124","Syed@1","Syed@12"};
+		
+		for(String password:passwords) {
+			
+			if(is8Chars.test(password)) {
+				System.out.println(password);
+			}
+			
+		}
+		
+		System.out.println(isEven.test(1000));
+		
+		System.out.println(isEven.test(1));
+		
+		System.out.println(is8Chars.test("Syed@123"));
+		
+		
+		
+
+	}
+}

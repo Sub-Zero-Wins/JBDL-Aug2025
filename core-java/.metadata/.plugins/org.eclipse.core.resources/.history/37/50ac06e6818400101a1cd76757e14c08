@@ -1,0 +1,19 @@
+package methodReferencing;
+
+@FunctionalInterface
+interface Itr
+{
+	Demo m1();
+}
+
+class Demo
+{
+	Demo()
+	{
+		System.out.println("Demo constr");
+	}
+}
+
+public class Demo2 {
+
+}

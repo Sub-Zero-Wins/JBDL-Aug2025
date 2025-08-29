@@ -1,0 +1,15 @@
+package defaultMethods;
+
+@FunctionalInterface
+interface Itr2
+{
+	static void m1()
+	{
+		
+	}
+}
+
+
+public class Demo2 {
+
+}

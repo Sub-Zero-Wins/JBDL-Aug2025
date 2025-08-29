@@ -1,0 +1,20 @@
+package methodReferencing;
+
+interface Calc
+{
+	void add();
+}
+
+class Calculator
+{
+	public void sum()
+	{
+		System.out.println("addition");
+	}
+}
+
+public class Demo1 
+{
+	
+
+}

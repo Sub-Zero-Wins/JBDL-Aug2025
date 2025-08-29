@@ -1,0 +1,20 @@
+package OptionalClass;
+
+import java.util.Optional;
+
+public class Demo1 
+{
+	public static void main(String[] args) 
+	{
+		
+		String email = null;
+		
+		Optional.of(email);
+		
+		Optional.ofNullable(email);
+		
+		
+		
+	}
+
+}

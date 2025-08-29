@@ -1,0 +1,38 @@
+package generics;
+
+class Data
+{
+	private int x ;
+
+	
+	public Data(int x) {
+		super();
+		this.x = x;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	@Override
+	public String toString() {
+		return "Data [x=" + x + "]";
+	}
+	
+	
+	
+	
+	
+}
+
+public class Demo
+{
+	public static void main(String[] args) {
+		
+	}
+
+}

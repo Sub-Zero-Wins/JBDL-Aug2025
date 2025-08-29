@@ -1,0 +1,16 @@
+package lambdaExpressions;
+
+@FunctionalInterface
+interface Calc
+{
+	 int square(int x);
+}
+
+public class Demo1 
+{
+	public static void main(String[] args) {
+		Calc c = x-> x*x; 
+		System.out.println(c.square(10));;
+	}
+
+}

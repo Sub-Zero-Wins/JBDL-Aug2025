@@ -1,0 +1,22 @@
+package lambdaExpressions;
+
+@FunctionalInterface
+interface Calc
+{
+	 int square(int x);
+}
+
+public class Demo1 
+{
+	public static void main(String[] args) {
+		Calc c = new Calc()
+		{
+			@Override
+			public int square(int x) {
+				return x*x;		
+			}	
+		};
+		System.out.println(c.square(10));;
+	}
+
+}
