@@ -885,14 +885,41 @@ terminal operations -
 example collect,forEach
 
 
-
-
-
-
-
-
 method and constructor referencing
+----------------------------------
+
+::
+
+
 joda time API
+--------------
+
+
+HW
+---
+IO streams
+Serialization
+
+
+Enums
+------
+
+defining a set of constants
+
+Byte data = -128 0 +127 
+-128,-127,-126,-3-2-1 0 1 2 3 127
+
+
+Color colour ;
+RED BLUE BREEN YELLOW
+
+AccountType
+ BRONZE SILVER GOLD PLATINUM
+ 
+ SVNGS_ACCOUNT CURRENT_ACCOUNT
+
+--------------------------------------------------------------------------------------------------------------------
+
 
 
 
