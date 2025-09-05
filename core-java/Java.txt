@@ -904,7 +904,7 @@ Serialization
 Enums
 ------
 
-defining a set of constants
+Enums can be used to define our own data types with a fixed set of constants.
 
 Byte data = -128 0 +127 
 -128,-127,-126,-3-2-1 0 1 2 3 127
@@ -920,36 +920,176 @@ AccountType
 
 --------------------------------------------------------------------------------------------------------------------
 
+MYSQL
+-----
+
+Relational (SQL) databases, which store data in structured tables with predefined relationships, and NoSQL (Non-relational) databases, designed for flexible and scalable storage of unstructured or semi-structured data, with subtypes like document, key-value, wide-column, and graph databases. Other significant types include Object-Oriented, Hierarchical, Time-Series, Cloud, Graph, and Vector databases, each suited for specific data management needs. 
+Relational Databases (SQL)
+Structure: Store data in tables with rows and columns, forming relationships between different data sets. 
+Best For: Applications requiring structured data, strong consistency, and complex queries. 
+Examples: MySQL, PostgreSQL, Oracle DB. 
+NoSQL (Non-Relational) Databases
+Structure:
+Handle unstructured or semi-structured data with flexible schemas, offering high scalability and performance. 
+Subtypes:
+Document Databases: Store data in document formats like JSON or BSON. 
+Key-Value Databases: Store data as simple key-value pairs. 
+Wide-Column Databases: Store data in tables with many columns that can vary from row to row. 
+Graph Databases: Store data in nodes and edges, ideal for complex relationships and network analysis. 
+Best For:
+Large-scale applications, real-time web apps, and data that doesn't fit neatly into tables. 
+Other Types of Databases
+Object-Oriented Databases: Store data in the form of objects, similar to object-oriented programming. 
+Hierarchical Databases: Organize data in a tree-like structure, with parent-child relationships. 
+Time-Series Databases: Optimized for handling time-stamped data, such as sensor data or financial transactions. 
+Cloud Databases: Databases hosted on a cloud platform, offering scalability, flexibility, and managed services. 
+Vector Databases: Designed to store and query vector embeddings, used in AI and machine learning for tasks like similarity search. 
 
 
 
 
+employee
+emp_id 		name	 	salary 	dept_id
+
+1               syed   	 	 1000         1
+2               rushda           2000         1
+3               Susmitha         3000         2
+4               Khurram          4000         2
 
 
 
+Types Of Joins
+---------------
+1.Inner Join 
+2.Left Join
+3.Right Join
+4.Full Join(not directly supported in MySQL)
+5.Self Join
+6.CROSS Join
+
+
+HW
+---
+Transactions.
+subquery.
 
 
 
+------------------
 
+Transactions -> savepoint , commit , rollback. 
 
-
-
-
-
-
-
-
-
-
-
-
+---------------------------------------------------------------------------------------------------------
 
 
 jdbc
 ----
+  Java To Database Connectivity.
+  
+  JDBC API.
 
-springboot
+read about types of drivers.
+----------------------------------
+
+Steps to connect jdbc
+
+1. load the driver
+2. establish conection
+3. use connection to run query
+4. access data from resultset
+ //
+do crud ops 
+and call stored proc from jdbc
+----------------------------------------
+
+Maven / Gradle / groovy
+
+Maven - Its a project management tool
+-> MANAGING DEPENDENCIES
+-> PROVIDES PROJECT STRUCTURE
+-> TESTING 
+-> BUILDING
+-> MAVEN LIFECYCLE OF A PROJECT
+
+and spring
+
+
+group id : domain name
+
+ gmail.com
+ irctc.in
+
+artifact id: name of jar file
+
+version
+
+0.0.0
+| | |-> bug fixes/patch updates
+| |---> added/ removed features without breaking the existing code
+|-----> major update or release 
+
+1.0.0
+1.0.1
+1.0.2
+1.0.3
+1.1.3
+1.2.3
+
+2.0.0
+
+HW learn more about maven lifecycle.
+--------------------------------------
+
+Spring
+------
+
+The key stages of the Spring bean life cycle are: 
+Bean Definition Acquisition:
+Spring reads the bean definitions from configuration sources (XML, Java configuration, or annotations) to understand how to create and configure the beans, including their properties and dependencies.
+Bean Instantiation:
+The Spring container creates an instance of the bean class, typically by invoking its constructor or a factory method.
+Dependency Injection (Population):
+After instantiation, Spring injects the bean's dependencies, either through constructor injection, setter injection, or field injection, as defined in the configuration.
+Bean Initialization:
+This stage involves performing any necessary initialization tasks after the bean is instantiated and its properties are set. This can be achieved through:
+Implementing the InitializingBean interface and overriding the afterPropertiesSet() method.
+Defining a custom init-method in XML configuration.
+Using the @PostConstruct annotation on a method.
+Bean Usage:
+The fully initialized bean is now ready for use by the application and can interact with other beans or components.
+Bean Destruction:
+When the Spring container is shut down, or a bean's scope dictates its destruction, cleanup tasks are performed. This can be achieved through:
+Implementing the DisposableBean interface and overriding the destroy() method.
+Defining a custom destroy-method in XML configuration.
+Using the @PreDestroy annotation on a method.
+
+springboot(3.x + java 17)
 -----------
+Spring Boot-> extension of spring framework -> declarative framework for creating apis and microservices.
+
+autoconfig + embedded tomcat server = springboot.
+
+@SpringBootApplication
+@Component
+@Configuration
+@ComponentScan
+@EnableAutoConfiguration
+@Qualifier
+@SpringBootTest
+
+-------------------------------------------------------------------
+
+2 ways
+------
+
+
+
+
+
+
+
+
+
 
 microservices
 --------------
