@@ -1079,6 +1079,72 @@ autoconfig + embedded tomcat server = springboot.
 
 -------------------------------------------------------------------
 
+
+Sprig ORM
+
+Spring data jpa
+
+JPA (Java Persistence API) provides a rich set of annotations that can be applied to fields within an entity class to define how those fields are mapped to columns in a database table.
+Common JPA Annotations on Fields:
+@Id: Designates a field as the primary key of the entity, uniquely identifying each record in the database table.
+Java
+
+    @Id
+    private Long id;
+@GeneratedValue: Specifies the strategy for generating primary key values. Common strategies include AUTO, IDENTITY, SEQUENCE, and TABLE.
+Java
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+@Column: Provides detailed mapping information for a field to a database column. Attributes like name, nullable, length, and unique can be specified.
+Java
+
+    @Column(name = "product_name", nullable = false, length = 255)
+    private String name;
+@Basic: Marks a field as a basic persistent type, typically used for primitive types or their wrapper classes. It allows specifying optional (nullability) and fetch (loading strategy).
+Java
+
+    @Basic(optional = false, fetch = FetchType.LAZY)
+    private String description;
+@Transient: Marks a field as non-persistent, meaning it will not be saved to or loaded from the database. This is useful for calculated fields or temporary data. 
+Java
+
+    @Transient
+    private int calculatedValue;
+@Lob: Used to map a field to a Large Object (LOB) column in the database, suitable for storing large amounts of data like images or large text.
+Java
+
+    @Lob
+    private byte[] imageData;
+Relationship Annotations (@OneToOne, @OneToMany, @ManyToOne, @ManyToMany): Define relationships between entities. These are applied to fields representing associations with other entity classes.
+Java
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+@JoinColumn: Specifies the foreign key column used in relationships, often used in conjunction with relationship annotations.
+Java
+
+    @OneToOne
+    @JoinColumn(name = "address_id")
+    private Address address;
+@Embedded: Indicates that an attribute within an entity should be treated as an embedded object, where its fields are mapped directly into the containing entity's table.
+Java
+
+    @Embedded
+    private Address address;
+@Enumerated: Specifies how an enumerated type should be persisted in the database, either as a String or an Ordinal (integer).
+Java
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
+@Temporal: Used for java.util.Date and java.util.Calendar fields to specify the database column type (e.g., DATE, TIME, TIMESTAMP).
+Java
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date creationDate;
+
 2 ways
 ------
 

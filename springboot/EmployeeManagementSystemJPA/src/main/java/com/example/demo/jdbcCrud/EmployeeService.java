@@ -9,7 +9,7 @@ public interface EmployeeService
 	public Employee addEmployee(Employee emp);
 	public Employee getEmployee(int empId);
 	public Employee updateEmployee(Employee updatedEmp);
-	public Employee deleteEmployee(int empId);
+	public String deleteEmployee(int empId);
 	public List<Employee> getAllEmployees();
 	
 }
