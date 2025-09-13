@@ -8,9 +8,13 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Employee;
 import com.example.demo.repository.EmployeeRepository;
+import com.example.demo.utility.ResourceNotFoundException;
+
+import jakarta.transaction.Transactional;
 
 
 @Service
+@Transactional
 public class EmpServiceImpl implements EmployeeService
 {
 
@@ -24,8 +28,9 @@ public class EmpServiceImpl implements EmployeeService
 	}
 
 	@Override
-	public Employee getEmployee(int empId) {
-		return repo.findById(empId).get();
+	public Employee getEmployee(int empId) throws ResourceNotFoundException {
+		
+		return repo.findById(empId).orElseThrow(()-> new ResourceNotFoundException("no empp with given id"));
 	}
 
 	@Override
@@ -41,9 +46,13 @@ public class EmpServiceImpl implements EmployeeService
 
 	@Override
 	public List<Employee> getAllEmployees() {
-
 		return  (List<Employee>) repo.findAll();
 }
+
+	@Override
+	public List<Employee> search(String name) {
+		return repo.findByName(name);
+	}
 
 
 

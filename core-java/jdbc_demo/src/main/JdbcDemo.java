@@ -20,11 +20,7 @@ public class JdbcDemo
 		PreparedStatement stmt1=conn.prepareStatement("SELECT * FROM employee where age > ? and salary < ?");
 		stmt1.setInt(1, 29);
 		stmt1.setInt(2, 40000);
-		
-		
-		
-		
-		
+			
 		ResultSet rs=stmt1.executeQuery(); //stmt.executeQuery("SELECT * FROM employee where empid ="+101);
 		
 		System.err.println("eid"+" | "+"ename"+" | "+"eage"+" | "+"esal"+"  | ");

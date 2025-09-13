@@ -23,13 +23,13 @@ public class EmployeeManagementSystemApplication implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		
-		service.addEmployee(new Employee(101,"Syed",29,134342));
-		service.addEmployee(new Employee(102,"Saqib",29,134341));
-		service.addEmployee(new Employee(103,"Sharukh",22,13414));
-	
-     System.out.println(service.getAllEmployees());
-     System.out.println(service.getEmployee(101));
+//		
+//		service.addEmployee(new Employee(101,"Syed",29,134342));
+//		service.addEmployee(new Employee(102,"Saqib",29,134341));
+//		service.addEmployee(new Employee(103,"Sharukh",22,13414));
+//	
+//     System.out.println(service.getAllEmployees());
+//     System.out.println(service.getEmployee(101));
 		
 	}
 
