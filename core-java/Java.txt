@@ -1282,11 +1282,53 @@ ORM Persistence context.
 
 JPA Relationships
 
-Pagination Sorting
-
 Swagger
 
+Pagination Sorting
+
 Junit Testing
+--------------
+
+   Customer -> BA -> BRD -> Design -> User Stories -> subtasks->
+
+   Requirement Collection
+
+    Design
+
+     Develop
+
+      Test
+       
+       Deploy
+   
+        Maintainance
+
+Agile
+-----
+
+ 2 weeks
+-----------------------------------------------
+
+                    Testing
+
+BlackBox Testing               WhiteBox Testing
+ Code not visible                 code is visible
+  Test engineers                     development engineers
+    manual                              manual
+     automation                            automation (Junit(Unit testing),TestNg + Mockito)
+
+
+Develop -> test cases
+
+TDD
+
+Test cases -> develop
+
+
+                                           
+
+
+
 
 Spring Security
 
