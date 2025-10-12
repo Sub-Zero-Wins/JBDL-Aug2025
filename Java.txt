@@ -1644,8 +1644,91 @@ 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
 
 
 
-microservices
---------------
+
+
+
+Monolithic Architecture
+------------------------
+
+-> single project (single technology)
+-> simple projects (small)
+-> not enough domain expertise
+-> budget of client is low
+
+
+
+pros- 
+-----
+1. less expensive
+2. faster
+3. easer to trace requests 
+
+cons-
+----
+1. inefficient scalablity
+2. debugging and maintain can get tricky for large apps
+3. single technology 
+4. one bug brings down entire application and impacts business
+
+
+ 	
+microservices Architecture
+---------------------------
+
+Its an architectural style in which a large application is broken down into individual services that have one responsibility 
+
+
+-> technology agnostic (multiple technologies)
+-> complex projects (large prjects)
+-> when we have enough domain expertise
+-> budget of client is good
+
+
+pros- 
+-----
+1. scalablity
+2. 
+3. multiple technologies can be used
+4. one bug doesn't brings down entire application individual services can be brough down and system is fault tolerance(resilient)
+5. services can be developed and deployed individually
+6. smaller teams
+7. better ci/cd and testing
+8. faster deployements
+9. enhanced maintainability
+
+
+cons-
+----
+
+
+1. more expensive(higher initial investment)
+2. slower due to network latency between multiple services
+3. difficult to trace requests in complex networks
+4. debugging and maintain can get tricky for large apps
+5. higher operational overhead
+
+
+
+
+
+
+
+
+
+
+
+DISTRIBUTED SYSTEM
+-------------------
+
+CAP theorem 
+-----------
+Consistency
+Availability
+Partition Tolerance
+
+
+
+
 
 
 
